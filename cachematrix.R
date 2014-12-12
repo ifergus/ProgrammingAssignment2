@@ -1,6 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
 
+## These functions provide the ability to cache the inverse of a matrix rather than 
+## having to compute it repeatedly.  These functions can be leveraged in a loop
+## or other functions where the inverse of a matrix would be reused.
+##
+## Funtions:
+## makeCacheMatrix: Creates a special "matrix" that stores the matrix inversion
+## cacheSolve: Calculates and returns a matrix that is the inverse of the special matrix 'x'
 
 makeCacheMatrix <- function(x = matrix()) {
   # Creates a special "matrix", which is really a list containing functions to:
@@ -42,7 +47,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 cacheSolve <- function(x, ...) {
-  # Calculates and returns a matrix that is the inverse of the secial matrix 'x'
+  # Calculates and returns a matrix that is the inverse of the special matrix 'x'
   #
   # Args:
   #   x: The special matrix to be inverted
